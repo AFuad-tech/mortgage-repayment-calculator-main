@@ -1,0 +1,513 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+
+  --White: hsl(0, 0%, 100%);
+  --Slate100: hsl(202, 86%, 94%);
+  --Slate300: hsl(203, 41%, 72%);
+  --Slate500: hsl(200, 26%, 54%);
+  --Slate700: hsl(200, 24%, 40%);
+  --Slate900: hsl(202, 55%, 16%);
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Inter", "Roboto", "Open Sans", Arial, sans-serif;
+}
+.container {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.calculator {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.morgage_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.morgage_title h1 {
+  width: 100%;
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--Slate900);
+}
+.morgage_title button {
+  font-size: 12px;
+  text-wrap: nowrap;
+  color: var(--Slate700);
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: transparent;
+}
+.morgage_title button:hover {
+  color: var(--Slate500);
+}
+.morgage_title button:focus {
+  color: var(--Slate300);
+}
+form {
+  margin-top: 30px;
+  height: 72%;
+}
+.column1 {
+  position: relative;
+  width: 100%;
+
+  height: auto;
+}
+.morgage_amount {
+  width: 100%;
+  padding-left: 38px;
+  font-size: 15px;
+  border: 1px solid var(--Slate700);
+  height: 35px;
+  margin-top: 25px;
+  cursor: pointer;
+  color: var(--Slate900);
+  font-weight: 500;
+}
+
+.morgage_amount:focus ~ .morgage_amount_pound_sign {
+  background-color: var(--Lime);
+}
+.morgage_amount:focus {
+  outline: none;
+  border-color: var(--Lime);
+}
+.label_morgage_amount {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  color: var(--Slate700);
+}
+.morgage_amount_pound_sign {
+  position: absolute;
+  background-color: var(--Slate100);
+  color: var(--Slate700);
+  font-weight: 500;
+  width: 32px;
+  height: 33px;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 26px;
+  left: 1px;
+}
+
+.column2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 20px;
+}
+
+.morgage_term {
+  position: relative;
+  height: 100%;
+  width: 48%;
+}
+
+.morgage_term_field {
+  height: 35px;
+  margin-top: 25px;
+  width: 100%;
+  border: 1px solid var(--Slate700);
+  padding-right: 55px;
+  padding-left: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--Slate900);
+  font-weight: 500;
+}
+.label_morgage_term_field {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  color: var(--Slate700);
+}
+.morgage_term_years {
+  width: 55px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: var(--Slate100);
+  color: var(--Slate700);
+  font-weight: 500;
+  position: absolute;
+  top: 26px;
+  right: 1px;
+}
+
+.morgage_term_field:focus ~ .morgage_term_years {
+  background-color: var(--Lime);
+}
+.morgage_term_field:focus {
+  outline: none;
+  border-color: var(--Lime);
+}
+
+.interest_rate {
+  position: relative;
+  height: 100%;
+  width: 48%;
+}
+.interest_rate_field {
+  height: 35px;
+  margin-top: 25px;
+  width: 100%;
+  border: 1px solid var(--Slate700);
+  padding-right: 55px;
+  padding-left: 10px;
+  font-size: 15px;
+  color: var(--Slate900);
+  font-weight: 500;
+}
+.label_interest_rate_field {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  color: var(--Slate700);
+}
+.interest_rate_percent {
+  position: absolute;
+  width: 55px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 26px;
+  right: 1px;
+  font-size: 16px;
+  background-color: var(--Slate100);
+  color: var(--Slate700);
+}
+.interest_rate_field:focus ~ .interest_rate_percent {
+  background-color: var(--Lime);
+}
+.interest_rate_field:focus {
+  outline: none;
+  border-color: var(--Lime);
+}
+
+.column3 {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 20px;
+}
+.column3 .p1 {
+  display: block;
+  color: var(--Slate700);
+}
+
+.morgage_types_repayment_choice {
+  width: 100%;
+  border: 1px solid black;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  margin-top: 8px;
+}
+.morgage_types_interest_choice {
+  width: 100%;
+  border: 1px solid black;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  margin-top: 10px;
+}
+.morgage_types_repayment {
+  transform: scale(1.2);
+  margin-right: 15px;
+}
+.label_morgage_types_repayment {
+  color: var(--Slate900);
+  font-weight: 700;
+}
+.morgage_types_interest {
+  transform: scale(1.2);
+  margin-right: 15px;
+}
+.label_morgage_types_interest {
+  color: var(--Slate900);
+  font-weight: 700;
+}
+.label_interest_rate_ .calculate {
+  width: 230px;
+  height: 40px;
+
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+input[type="radio"] {
+  appearance: none; /* Remove the default radio button style */
+  width: 20px; /* Size of the outer circle */
+  height: 20px;
+  border-radius: 50%; /* Make it circular */
+  border: 1px solid var(--Lime); /* Green outer circle */
+  position: relative;
+  cursor: pointer;
+  background-color: white; /* White background */
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Ensure border is included in the size */
+}
+input[type="radio"]:checked::before {
+  content: ""; /* Necessary for the pseudo-element */
+  position: absolute;
+  top: 9px; /* Vertically center */
+  left: 50%; /* Horizontally center */
+
+  width: 15px; /* Smaller size for the inner circle */
+  height: 15px; /* Same smaller size for the inner circle */
+  background-color: var(--Lime); /* Yellow color for the inner circle */
+  border-radius: 50%; /* Make the inner circle circular */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Offset by 50% to ensure exact centering */
+}
+.calculate {
+  background-color: var(--Lime);
+  height: 45px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-wrap: nowrap;
+  padding-right: 30px;
+  border-radius: 50px;
+  color: var(--Slate900);
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none; /* remove default border */
+  outline: none; /* remove default outline */
+  margin-top: 25px;
+}
+
+.calculator_img {
+  margin-left: 30px;
+}
+/* Hover effect (slightly smaller) */
+.calculate:hover {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Focus effect (keyboard/tab) */
+.calculate:focus {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  outline: none; /* ensure no green/blue outline */
+}
+
+/* Active (click/press) */
+.calculate:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+
+.result {
+  background-color: var(--Slate900);
+  width: 50%;
+  height: 100%;
+  border-radius: 0 20px 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result_before {
+  width: 80%;
+  height: 80%;
+  background-color: var(--Slate900);
+  display: flex; /* give this flex */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--White);
+}
+.result_before h2 {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.result_before p {
+  font-size: 15px;
+  color: var(--Slate500);
+}
+.results_after {
+  width: 80%;
+  height: 80%;
+  display: none; /* give this flex */
+  flex-direction: column;
+  justify-content: flex-start;
+
+  text-align: center;
+  color: var(--White);
+  text-align: center;
+}
+.results_after .top {
+  background-color: var(--Slate900);
+  text-align: left;
+}
+.top h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.top p {
+  font-size: 14px;
+  color: var(--Slate500);
+  margin-bottom: 25px;
+}
+hr {
+  width: 100%; /* 80% of container */
+  margin: 25px auto; /* auto centers it */
+  border: none; /* remove default styling */
+  border-top: 1px solid #ccc; /* custom line */
+}
+.results_after .bottom {
+  background-color: hsl(201, 54%, 11%);
+  text-align: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+}
+.bottom p {
+  font-size: 14px;
+  color: var(--Slate500);
+}
+.bottom .Final_result_monthly {
+  font-size: 40px;
+  color: var(--Lime);
+  margin-top: 10px;
+}
+.bottom .Final_result_total {
+  font-size: 18px;
+  color: var(--White);
+  margin-top: 10px;
+}
+.green_top {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background-color: var(--Lime);
+  border-radius: 7px 7px 0 0;
+  top: 0;
+  left: 0;
+}
+/* Error showcase */
+.error_txt1 {
+  display: none;
+  margin-top: 10px;
+  font-size: 16px;
+  color: red;
+}
+.error_txt2 {
+  display: none;
+  margin-top: 10px;
+  font-size: 16px;
+  color: red;
+}
+.error_txt3 {
+  display: none;
+  margin-top: 10px;
+  font-size: 16px;
+  color: red;
+}
+.error_txt4 {
+  display: none;
+  margin-top: 10px;
+  font-size: 16px;
+  color: red;
+}
+
+@media (max-width: 375px) {
+  .container {
+    height: 1000px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 300px;
+  }
+  .morgage_title {
+    padding-top: 50px;
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+  .result {
+    padding: 25px 0;
+    border-radius: 0 0 0 0;
+    width: 80%;
+  }
+  .calculator {
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    padding-bottom: 25px;
+  }
+  .clear_all {
+    margin-top: 10px;
+  }
+}

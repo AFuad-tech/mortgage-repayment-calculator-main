@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="morgage_title">
+          <h1>Morgage Calcualtor</h1>
+          <button class="clear_all" id="clear_all">Clear All</button>
+        </div>
+        <form>
+          <div class="column1">
+            <label for="morgage_amount" class="label_morgage_amount "
+              >Morgage Amount</label
+            >
+            
+            <input
+              type="number"
+              name="morgage_amount"
+              id="morgage_amount"
+              class="morgage_amount error"
+              min="0"
+            />
+            <span class="morgage_amount_pound_sign error1 error" >&#8356</span>
+            <p class="error_txt1" id="error_txt1">This is the first error</p>
+          </div>
+          <div class="column2">
+            <div class="morgage_term">
+              <label for="morgage_term_field" class="label_morgage_term_field ">Morgage Term</label>
+              
+              <input
+                type="number"
+                name="morgage_term_field"
+                id="morgage_term_field"
+                class="morgage_term_field error"
+                min="0"
+              />
+              <span class="morgage_term_years error2 error">years</span>
+              <p class="error_txt2" id="error_txt2">This field is required</p>
+            </div>
+            <div class="interest_rate">
+              <label for="interest_rate_field" class="label_interest_rate_field ">Interest Rate</label>
+              
+              <input
+                type="number"
+                name="interest_rate_field"
+                id="interest_rate_field"
+                class="interest_rate_field error"
+                min="0"
+              />
+              <span class="interest_rate_percent error3 error">%</span>
+              <p class="error_txt3" id="error_txt3">This field is required</p>
+            </div>
+          </div>
+          <div class="column3">
+            <p class="p1">Morgage Types</p>
+            <div class="morgage_types_repayment_choice" id="morgage_types_repayment_choice">
+              <input
+              type="radio"
+              name="morgage_types_repayment"
+              id="morgage_types_repayment"
+              class="morgage_types_repayment"
+              
+            />
+            <label for="morgage_types_repayment" class="label_morgage_types_repayment"
+              >Repayment</label
+            >
+            </div>
+            <div class="morgage_types_interest_choice" id="morgage_types_interest_choice">
+              <input
+              type="radio"
+              name="morgage_types_interest"
+              id="morgage_types_interest"
+              class="morgage_types_interest"
+            />
+            <label for="morgage_types_interest" class="label_morgage_types_interest"
+              >Interest Only</label
+            >
+
+            </div>
+            <p class="error_txt4 error" id="error_txt4">This field is required.</p>
+          </div>
+        </form>
+        <button id="calculate" class="calculate"> <img src="./assets/images/icon-calculator.svg" class="calculator_img" alt="">Calculate Repayments</button>
+      </div>
+      <div class="result">
+        <div class="result_before" id="result_before">
+          <img src="./assets/images/illustration-empty.svg" alt="">
+          <h2>Results shown here</h2>
+          <p>Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.</p>
+        </div>
+        <div class="results_after" id="results_after">
+          <div class="top">
+            <h3>Your results</h3>
+            <p>Your results are shown below based on the information you provided. 
+            To adjust the results, edit the form and click “calculate repayments” again.</p>
+          </div>
+
+          <div class="bottom">
+            <div class="green_top"></div>
+            <p>Your monthly repayments</p>
+            <p class="Final_result_monthly" id="Final_result_monthly">34325235</p>
+            <hr>
+            <p>Total you'll repay over the term</p>
+            <p class="Final_result_total" id="Final_result_total">34343</p>
+
+   
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!--   Mortgage Calculator
+  Clear All
+
+  Mortgage Amount
+
+  Mortgage Term
+
+  Interest Rate
+
+  Mortgage Type
+  Repayment
+  Interest Only
+
+  Calculate Repayments
+
+  
+
+  Results shown here
+
+  Complete the form and click “calculate repayments” to see what 
+  your monthly repayments would be.
+
+
+
+  Your results
+
+  Your results are shown below based on the information you provided. 
+  To adjust the results, edit the form and click “calculate repayments” again.
+
+  Your monthly repayments
+
+  Total you'll repay over the term -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
